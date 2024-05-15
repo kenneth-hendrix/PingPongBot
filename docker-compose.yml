@@ -1,9 +1,11 @@
 version: '3.7'
 services:
   ping-pong-bot:
-    image: ping-pong-bot:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./elo_data.json:/app/elo_data.json
     environment:
-      - BOT_TOKEN=YourBotTokenHere #Paste your bot token with no quotes or space before the equals
-      - GUILD_ID=YourGuildIdHere #Paste your guild id with no quotes or space before the equals
+      - BOT_TOKEN=YourBotTokenHere #Paste your bot token with no quotes or space after the equals
+      - GUILD_ID=YourGuildIdHere #Paste your guild id with no quotes or space after the equals

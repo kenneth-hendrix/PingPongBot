@@ -34,9 +34,7 @@ This Discord bot tracks and updates Elo ratings for users playing ping pong.
     Navigate to the root directory of your project (where `docker-compose.yml` is located) and run:
 
     ```bash
-    docker build -t ping-pong-bot:latest .
-    docker-compose build
-    docker-compose up -d
+    docker-compose up --build -d
     ```
 
     This will build the Docker image and start the container. The bot should now be running and connected to your Discord server.
